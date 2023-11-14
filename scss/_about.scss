@@ -1,0 +1,389 @@
+$primary: #272727;
+$secondary: #b09777;
+$text-color: #797979;
+$header-color: #fefefe;
+$card-color: #323232;
+$hover-card: #b19777;
+.back-load{
+  position: absolute;
+  width: 100%;
+  height: 687px;
+  animation: back 3s linear;
+  z-index: 50;
+}
+.laoder{
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  width: 100px;
+  height: 1px;
+  animation: laod 3s cubic-bezier(0, 0, 0.96, 0.4);
+}
+@keyframes laod {
+  0%{
+      transform: scaleX(1);
+      background-color: #b09777;
+  }
+  95%{
+      background-color: #b09777;
+  }
+  100%{
+      transform: scaleX(10);
+      background-color: #b0977700;
+  }
+}
+@keyframes back {
+  0%{
+      background-color: #272727;
+  }
+  100%{
+      background-color: #272727;
+  }
+}
+@keyframes banner {
+  0% {
+    top: 400px;
+  }
+  100% {
+    top: 270px;
+  }
+}
+.container-about {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $primary;
+}
+.about{
+    display: grid;
+    grid-template-columns: 0.5fr 5fr;
+  .header-left-about{
+      position: relative;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      justify-items: center;
+      .card-header {
+        position: absolute;
+        left: 30px;
+        width: 150px;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "oswald";
+        background-color: #272727;
+        h1 {
+          margin: 1px;
+          color: $secondary;
+          letter-spacing: 3px;
+        }
+        img {
+          width: 100%;
+        }
+        p {
+          margin: 5px;
+          color: $header-color;
+        }
+      }
+    }
+  .header-right-about{
+    background-image: url(../assets/img/projects/4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+      .background-about{
+        background-image: linear-gradient(0deg ,rgb(39, 39, 39),rgba(39, 39, 39, 0.938),rgba(39, 39, 39, 0.692));
+        display: grid;
+        grid-template-rows: 1fr 6fr;
+        justify-content: end;
+        nav {
+          margin: 5px 40px;
+          ul {
+            display: flex;
+            li{
+              margin: 5px;
+              padding: 5px;
+              list-style-type: none;
+              color: $header-color;
+              font-family: "Oswald";
+              letter-spacing: 2px;
+              &:hover {
+                color: $secondary;
+                cursor: pointer;
+                &:nth-child(1) a{
+                  color: $secondary;
+                }
+                &:nth-child(2) a{
+                  color: $secondary;
+                }
+                ul {
+                  display: block;
+                }
+              }
+              ul {
+                position: absolute;
+                display: none;
+                flex-direction: column;
+                background-color: $card-color;
+                padding: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+}
+.section-about {
+  .section1-right {
+    .line1-about {
+      position: absolute;
+      width: 200px;
+      height: 1px;
+      background-color: rgba(121, 121, 121, 0.5);
+      top: 20px;
+    }
+    .line2-about {
+      position: absolute;
+      width: 1px;
+      height: 243px;
+      background-color: rgba(121, 121, 121, 0.5);
+      top: 20px;
+    }
+    .line3-about {
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      background-color: rgba(121, 121, 121, 0.5);
+      top: 263px;
+    }
+  }
+}
+.dibag {
+  position: absolute;
+  width: 1px;
+  height: 2250px;
+  background-color: rgba(121, 121, 121, 0.116);
+  &:nth-child(1) {
+    left: 120px;
+  }
+  &:nth-child(2) {
+    left: 520px;
+  }
+  &:nth-child(3) {
+    left: 940px;
+  }
+  &:nth-child(4) {
+    left: 1260px;
+  }
+}
+.section-team {
+  display: grid;
+  grid-template-rows: 0.5fr 2fr;
+  margin: 0 200px;
+  .img-team {
+    display: flex;
+    font-family: "oswald";
+    .card1-team {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+      overflow: hidden;
+      .banner-img1 {
+        position: absolute;
+        top: 365px;
+        background-color: $card-color;
+        padding: 5px 20px;
+        text-align: center;
+        box-shadow: 0 0 10px 0 #0e0e0e;
+        i {
+          color: $secondary;
+          padding: 2px;
+          margin: 0 4px;
+          &:hover {
+            color: $header-color;
+            cursor: pointer;
+          }
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+      h4 {
+        letter-spacing: 3px;
+        color: $header-color;
+        margin: 2px 0;
+      }
+      p {
+        color: $text-color;
+        letter-spacing: 2px;
+        margin: 2px 0;
+      }
+      &:hover {
+        cursor: pointer;
+        .banner-img1 {
+          animation: banner 0.5s ease-in-out both;
+        }
+      }
+      .line1-img1 {
+        position: absolute;
+        width: 100px;
+        height: 1px;
+        background-color: $text-color;
+        top: 10px;
+        left: 10px;
+      }
+      .line2-img1 {
+        position: absolute;
+        width: 1px;
+        height: 100px;
+        background-color: $text-color;
+        top: 10px;
+        left: 10px;
+      }
+    }
+    .card2-team {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+      overflow: hidden;
+      .banner-img2 {
+        position: absolute;
+        top: 3605px;
+        background-color: $card-color;
+        padding: 5px 30px;
+        text-align: center;
+        box-shadow: 0 0 10px 0 #0e0e0e;
+        i {
+          color: $secondary;
+          padding: 2px;
+          margin: 0 4px;
+          &:hover {
+            color: $header-color;
+            cursor: pointer;
+          }
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+      h4 {
+        letter-spacing: 3px;
+        color: $header-color;
+        margin: 2px 0;
+      }
+      p {
+        color: $text-color;
+        letter-spacing: 2px;
+        margin: 2px 0;
+      }
+      &:hover {
+        cursor: pointer;
+        .banner-img2 {
+          animation: banner 0.5s ease-in-out both;
+        }
+      }
+      .line1-img2 {
+        position: absolute;
+        width: 100px;
+        height: 1px;
+        background-color: $text-color;
+        top: 10px;
+        left: 10px;
+      }
+      .line2-img2 {
+        position: absolute;
+        width: 1px;
+        height: 100px;
+        background-color: $text-color;
+        top: 10px;
+        left: 10px;
+      }
+    }
+    .card3-team {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+      overflow: hidden;
+      .banner-img3 {
+        position: absolute;
+        top: 365px;
+        background-color: $card-color;
+        padding: 5px 20px;
+        text-align: center;
+        box-shadow: 0 0 10px 0 #0e0e0e;
+        i {
+          color: $secondary;
+          padding: 2px;
+          margin: 0 4px;
+          &:hover {
+            color: $header-color;
+            cursor: pointer;
+          }
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+      h4 {
+        letter-spacing: 3px;
+        color: $header-color;
+        margin: 2px 0;
+      }
+      p {
+        color: $text-color;
+        letter-spacing: 2px;
+        margin: 2px 0;
+      }
+      &:hover {
+        cursor: pointer;
+        .banner-img3 {
+          animation: banner 0.5s ease-in-out both;
+        }
+      }
+      .line1-img3 {
+        position: absolute;
+        width: 100px;
+        height: 1px;
+        background-color: $text-color;
+        top: 10px;
+        left: 10px;
+      }
+      .line2-img3 {
+        position: absolute;
+        width: 1px;
+        height: 100px;
+        background-color: $text-color;
+        top: 10px;
+        left: 10px;
+      }
+    }
+  }
+  .text-team {
+    font-family: "oswald";
+    font-size: 1.5rem;
+    color: $header-color;
+    letter-spacing: 5px;
+    span {
+      color: $secondary;
+    }
+  }
+}
+.footer {
+  .row1 {
+    justify-content: space-between;
+    margin: 0 120px;
+  }
+}

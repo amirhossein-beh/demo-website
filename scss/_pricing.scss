@@ -1,0 +1,341 @@
+$primary: #272727;
+$secondary: #b09777;
+$text-color: #797979;
+$header-color: #fefefe;
+$card-color: #323232;
+$hover-card: #b19777;
+.hvr-left{
+  background-image: linear-gradient($card-color,$card-color);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size .3s linear;
+  &:hover{
+    background-size: 100% 100%;
+    background-position-x: left;
+    color: #0b0b0b;
+  }
+}
+.dibag-pricing {
+  position: absolute;
+  width: 1px;
+  height: 2000px;
+  background-color: rgba(121, 121, 121, 0.116);
+  &:nth-child(1) {
+    left: 120px;
+  }
+  &:nth-child(2) {
+    left: 520px;
+  }
+  &:nth-child(3) {
+    left: 940px;
+  }
+  &:nth-child(4) {
+    left: 1260px;
+  }
+}
+.container-pricing {
+  max-width: 1450px;
+  margin: auto;
+  position: relative;
+}
+.header-pricing {
+  display: grid;
+  grid-template-columns: 0.5fr 5fr;
+  .header-left-pricing {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    .card-header {
+      position: absolute;
+      left: 30px;
+      width: 150px;
+      height: auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "oswald";
+      background-color: #272727;
+      h1 {
+        margin: 1px;
+        color: $secondary;
+        letter-spacing: 3px;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        margin: 5px;
+        color: $header-color;
+      }
+    }
+  }
+  .header-right-pricing {
+    background-image: url(../assets/img/projects/4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    .background-pricing {
+      background-image: linear-gradient(
+        0deg,
+        rgb(39, 39, 39),
+        rgba(39, 39, 39, 0.938),
+        rgba(39, 39, 39, 0.692)
+      );
+      display: grid;
+      grid-template-rows: 1fr 6fr;
+      justify-content: end;
+      nav {
+        margin: 5px 40px;
+        ul {
+          display: flex;
+          li{
+            margin: 5px;
+            padding: 5px;
+            list-style-type: none;
+            color: $header-color;
+            font-family: "Oswald";
+            letter-spacing: 2px;
+            &:hover {
+              color: $secondary;
+              cursor: pointer;
+              &:nth-child(1) a{
+                color: $secondary;
+              }
+              &:nth-child(2) a{
+                color: $secondary;
+              }
+              ul {
+                display: block;
+              }
+            }
+            ul {
+              position: absolute;
+              display: none;
+              flex-direction: column;
+              background-color: $card-color;
+              padding: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.section-pricing {
+  display: grid;
+  grid-template-rows: 0.5fr 2fr;
+  .card-pricing {
+    display: flex;
+    justify-content: center;
+    .card1-pricing {
+      background-color: $card-color;
+      width: 300px;
+      margin: 0 30px;
+      padding: 5px 10px;
+      color: $header-color;
+      font-family: "oswald";
+      h3 {
+        color: $secondary;
+        letter-spacing: 5px;
+        margin: 4px 10px;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 5px 15px;
+      }
+      .tik1 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+        i {
+          color: $secondary;
+        }
+      }
+      .tik2 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+        i {
+          color: $secondary;
+        }
+      }
+      .tik3 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+      }
+      .tik4 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .card2-pricing {
+      background-color: $card-color;
+      width: 300px;
+      margin: 0 30px;
+      padding: 5px 10px;
+      color: $header-color;
+      font-family: "oswald";
+      h3 {
+        color: $secondary;
+        letter-spacing: 5px;
+        margin: 4px 10px;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 5px 15px;
+      }
+      .tik1 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+        i {
+          color: $secondary;
+        }
+      }
+      .tik2 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+        i {
+          color: $secondary;
+        }
+      }
+      .tik3 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+        i {
+          color: $secondary;
+        }
+      }
+      .tik4 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .card3-pricing {
+      background-color: $card-color;
+      width: 300px;
+      margin: 0 30px;
+      padding: 5px 10px;
+      color: $header-color;
+      font-family: "oswald";
+      h3 {
+        color: $secondary;
+        letter-spacing: 5px;
+        margin: 4px 10px;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 5px 15px;
+      }
+      .tik1 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+        i {
+          color: $secondary;
+        }
+      }
+      .tik2 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+        i {
+          color: $secondary;
+        }
+      }
+      .tik3 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+        i {
+          color: $secondary;
+        }
+      }
+      .tik4 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 5px 10px;
+        p {
+          margin: 0 15px;
+          letter-spacing: 2px;
+        }
+        i {
+          color: $secondary;
+        }
+      }
+    }
+    button {
+      font-family: "oswald";
+      background-color: $secondary;
+      border: none;
+      color: $header-color;
+      letter-spacing: 3px;
+      padding: 15px 30px;
+      margin: 30px 25px;
+    }
+  }
+  .text-pricing {
+    font-family: "oswald";
+    letter-spacing: 8px;
+    color: $header-color;
+    margin: 5px 130px;
+    font-size: 1.5rem;
+    span {
+      color: $secondary;
+    }
+  }
+}

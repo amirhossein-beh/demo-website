@@ -1,0 +1,162 @@
+$primary: #272727;
+$secondary: #b09777;
+$text-color: #797979;
+$header-color: #fefefe;
+$card-color: #323232;
+$hover-card: #b19777;
+// 'Didact Gothic'
+// 'Oswald'
+.hvr-left{
+  background-image: linear-gradient($card-color,$card-color);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size .3s linear;
+  &:hover{
+    background-size: 100% 100%;
+    background-position-x: left;
+    color: #0b0b0b;
+  }
+}
+@keyframes laod {
+  0%{
+      transform: scaleX(1);
+      background-color: #b09777;
+  }
+  95%{
+      background-color: #b09777;
+  }
+  100%{
+      transform: scaleX(10);
+      background-color: #b0977700;
+  }
+}
+@keyframes back {
+  0%{
+      background-color: #272727;
+  }
+  100%{
+      background-color: #272727;
+  }
+}
+.dibag-read {
+  position: absolute;
+  width: 1px;
+  height: 2100px;
+  background-color: rgba(121, 121, 121, 0.116);
+  &:nth-child(1) {
+    left: 120px;
+  }
+  &:nth-child(2) {
+    left: 520px;
+  }
+  &:nth-child(3) {
+    left: 940px;
+  }
+  &:nth-child(4) {
+    left: 1260px;
+  }
+}
+.read {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 1000px;
+  .img-read {
+    z-index: 1;
+    img {
+      width: 100%;
+    }
+  }
+  .text-read {
+    font-family: "Oswald";
+    h1 {
+      letter-spacing: 8px;
+      color: $secondary;
+    }
+    P {
+      font-family: "Didact Gothic";
+      color: $text-color;
+    }
+  }
+}
+.form {
+  display: flex;
+  .left {
+    display: flex;
+    width: 600px;
+    margin: 10px 110px;
+    .left-img {
+      width: 150px;
+      margin: 20px;
+      img {
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+    .text-left {
+      font-family: "Didact Gothic";
+      color: $text-color;
+      p {    
+        span {
+            margin: 0 25px 0 0;
+          color: $secondary;
+        }
+      }
+      h5{
+          color: $secondary;
+          i{
+              padding: 0 10px;
+          }
+          &:hover{
+              color: $text-color;
+              cursor: pointer;
+          }
+      }
+    }
+  }
+  .right{
+    .form{
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      h4{
+        color: $secondary;
+        font-family: 'Didact Gothic';
+      }
+      input{
+        background-color: $primary;
+        border: none;
+        margin: 10px 0;
+        border-bottom: 0.1px solid #79797946;
+        &:focus-visible{
+          outline: none;
+        }
+      }
+      textarea{
+        background-color: $primary;
+        border: none;
+        margin: 10px 0;
+        border-bottom: 0.1px solid #79797946;
+        &:focus-visible{
+          outline: none;
+        }
+      }
+      label{
+        color: $text-color;
+        font-family: 'Didact Gothic';
+      }
+      button{
+        align-self: flex-start;
+        font-family: "oswald";
+        background-color: #b09777;
+        border: none;
+        color: #fefefe;
+        letter-spacing: 3px;
+        padding: 10px 20px ;
+        margin: 5px;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,448 @@
+$primary: #272727;
+$secondary: #b09777;
+$text-color: #797979;
+$header-color: #fefefe;
+$card-color: #323232;
+$hover-card: #b19777;
+// 'Didact Gothic'
+// 'Oswald'
+.back-load {
+  position: absolute;
+  width: 100%;
+  height: 687px;
+  animation: back 3s linear;
+  z-index: 50;
+}
+.laoder {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  width: 100px;
+  height: 1px;
+  animation: laod 3s cubic-bezier(0, 0, 0.96, 0.4);
+}
+@keyframes laod {
+  0% {
+    transform: scaleX(1);
+    background-color: #b09777;
+  }
+  95% {
+    background-color: #b09777;
+  }
+  100% {
+    transform: scaleX(10);
+    background-color: #b0977700;
+  }
+}
+@keyframes back {
+  0% {
+    background-color: #272727;
+  }
+  100% {
+    background-color: #272727;
+  }
+}
+@keyframes khat-process {
+  from {
+    width: 80px;
+  }
+  to {
+    width: 250px;
+  }
+}
+.dibag-process {
+  position: absolute;
+  width: 1px;
+  height: 2200px;
+  background-color: rgba(121, 121, 121, 0.116);
+  &:nth-child(1) {
+    left: 120px;
+  }
+  &:nth-child(2) {
+    left: 520px;
+  }
+  &:nth-child(3) {
+    left: 940px;
+  }
+  &:nth-child(4) {
+    left: 1260px;
+  }
+}
+.container-process {
+  max-width: 1450px;
+  margin: auto;
+  position: relative;
+}
+.header-process {
+  display: grid;
+  grid-template-columns: 0.5fr 5fr;
+  .header-left-process {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    .card-header {
+      position: absolute;
+      left: 30px;
+      width: 150px;
+      height: auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "oswald";
+      background-color: #272727;
+      h1 {
+        margin: 1px;
+        color: $secondary;
+        letter-spacing: 3px;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        margin: 5px;
+        color: $header-color;
+      }
+    }
+  }
+  .header-right-process {
+    background-image: url(../assets/img/projects/4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    .background-process {
+      background-image: linear-gradient(
+        0deg,
+        rgb(39, 39, 39),
+        rgba(39, 39, 39, 0.938),
+        rgba(39, 39, 39, 0.692)
+      );
+      display: grid;
+      grid-template-rows: 1fr 6fr;
+      justify-content: end;
+      nav {
+        margin: 5px 40px;
+        ul {
+          display: flex;
+          li {
+            margin: 5px;
+            padding: 5px;
+            list-style-type: none;
+            color: $header-color;
+            font-family: "Oswald";
+            letter-spacing: 2px;
+            &:hover {
+              color: $secondary;
+              cursor: pointer;
+              &:nth-child(1) a{
+                color: $secondary;
+              }
+              &:nth-child(2) a{
+                color: $secondary;
+              }
+              ul {
+                display: block;
+              }
+            }
+            ul {
+              position: absolute;
+              display: none;
+              flex-direction: column;
+              background-color: $card-color;
+              padding: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.section-process {
+  display: grid;
+  grid-template-rows: 0.5fr 5fr;
+  .text-process {
+    font-family: "oswald";
+    color: $header-color;
+    margin: 5px 120px;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    span {
+      color: $secondary;
+    }
+  }
+  .card-img {
+    .img-arrow {
+      display: flex;
+      margin: 20px 0;
+      position: relative;
+      .img1-pro {
+        position: absolute;
+        left: 280px;
+        top: 5px;
+        transform: rotateX(180deg);
+        img {
+          transform: rotate(350deg);
+          width: 60%;
+        }
+      }
+      .img2-pro {
+        position: absolute;
+        left: 580px;
+        top: 37px;
+        img {
+          width: 60%;
+          transform: rotate(350deg);
+        }
+      }
+      .img3-pro {
+        position: absolute;
+        left: 880px;
+        top: 5px;
+        transform: rotateX(180deg);
+        img {
+          transform: rotate(350deg);
+          width: 60%;
+        }
+      }
+    }
+    .card-process {
+      display: flex;
+      position: relative;
+      .icon-card1-pro {
+        i {
+          position: absolute;
+          left: 175px;
+          top: -50px;
+          border: 0.5px dashed $text-color;
+          padding: 30px 27px;
+          font-size: 1.5rem;
+          color: $secondary;
+          border-radius: 50%;
+        }
+        .card1-pro {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 250px;
+          left: 50px;
+          top: 50px;
+          font-family: "oswald";
+          background-color: $card-color;
+          margin: 5px 20px;
+          padding: 5px 20px;
+          border-radius: 20px;
+          color: $header-color;
+          .khat-process {
+            width: 100px;
+            height: 1px;
+            background-color: $text-color;
+          }
+          h2 {
+            letter-spacing: 8px;
+          }
+          p {
+            font-family: "Didact Gothic";
+            color: $text-color;
+          }
+          h1 {
+            text-align: end;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            color: $text-color;
+          }
+          &:hover {
+            background-color: $card-color;
+            box-shadow: 0px 6px 10px #141414;
+            background-color: $hover-card;
+            p {
+              color: $header-color;
+            }
+            h1 {
+              color: $header-color;
+            }
+            .khat-process {
+              animation: khat-process 1s ease-out both;
+            }
+          }
+        }
+      }
+      .icon-card2-pro {
+        i {
+          position: absolute;
+          left: 475px;
+          top: 5px;
+          border: 0.5px dashed $text-color;
+          padding: 30px 29px;
+          font-size: 1.5rem;
+          color: $secondary;
+          border-radius: 50%;
+        }
+        .card2-pro {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          left: 350px;
+          top: 100px;
+          width: 250px;
+          font-family: "oswald";
+          background-color: $card-color;
+          margin: 5px 20px;
+          padding: 5px 20px;
+          border-radius: 20px;
+          color: $header-color;
+          .khat-process {
+            width: 100px;
+            height: 1px;
+            background-color: $text-color;
+          }
+          h2 {
+            letter-spacing: 8px;
+          }
+          p {
+            font-family: "Didact Gothic";
+            color: $text-color;
+          }
+          h1 {
+            text-align: end;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            color: $text-color;
+          }
+          &:hover {
+            background-color: $card-color;
+            box-shadow: 0px 6px 10px #141414;
+            background-color: $hover-card;
+            p {
+              color: $header-color;
+            }
+            h1 {
+              color: $header-color;
+            }
+            .khat-process {
+              animation: khat-process 1s ease-out both;
+            }
+          }
+        }
+      }
+      .icon-card3-pro {
+        i {
+          position: absolute;
+          left: 770px;
+          top: -50px;
+          border: 0.5px dashed $text-color;
+          padding: 30px 29px;
+          font-size: 1.5rem;
+          color: $secondary;
+          border-radius: 50%;
+        }
+        .card3-pro {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          left: 650px;
+          top: 50px;
+          width: 250px;
+          font-family: "oswald";
+          background-color: $card-color;
+          margin: 5px 20px;
+          padding: 5px 20px;
+          border-radius: 20px;
+          color: $header-color;
+          .khat-process {
+            width: 100px;
+            height: 1px;
+            background-color: $text-color;
+          }
+          h2 {
+            letter-spacing: 8px;
+          }
+          p {
+            font-family: "Didact Gothic";
+            color: $text-color;
+          }
+          h1 {
+            text-align: end;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            color: $text-color;
+          }
+          &:hover {
+            background-color: $card-color;
+            box-shadow: 0px 6px 10px #141414;
+            background-color: $hover-card;
+            p {
+              color: $header-color;
+            }
+            h1 {
+              color: $header-color;
+            }
+            .khat-process {
+              animation: khat-process 1s ease-out both;
+            }
+          }
+        }
+      }
+      .icon-card4-pro {
+        i {
+          position: absolute;
+          left: 1070px;
+          top: 5px;
+          border: 0.5px dashed $text-color;
+          padding: 29px 30px;
+          font-size: 1.5rem;
+          color: $secondary;
+          border-radius: 50%;
+        }
+        .card4-pro {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          left: 950px;
+          top: 100px;
+          width: 250px;
+          font-family: "oswald";
+          background-color: $card-color;
+          margin: 5px 20px;
+          padding: 5px 20px;
+          border-radius: 20px;
+          color: $header-color;
+          .khat-process {
+            width: 100px;
+            height: 1px;
+            background-color: $text-color;
+          }
+          h2 {
+            letter-spacing: 8px;
+          }
+          p {
+            font-family: "Didact Gothic";
+            color: $text-color;
+          }
+          h1 {
+            text-align: end;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            color: $text-color;
+          }
+          &:hover {
+            background-color: $card-color;
+            box-shadow: 0px 6px 10px #141414;
+            background-color: $hover-card;
+            p {
+              color: $header-color;
+            }
+            h1 {
+              color: $header-color;
+            }
+            .khat-process {
+              animation: khat-process 1s ease-out both;
+            }
+          }
+        }
+      }
+    }
+  }
+}

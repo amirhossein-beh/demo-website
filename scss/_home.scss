@@ -1,0 +1,818 @@
+// 'Didact Gothic'
+// 'Oswald'
+$primary: #272727;
+$secondary: #b09777;
+$text-color: #797979;
+$header-color: #fefefe;
+$card-color: #323232;
+$hover-card: #b19777;
+a{
+  text-decoration: none;
+  color: $header-color;
+}
+@keyframes card {
+  from {
+    top: 205px;
+  }
+  to {
+    top: 180px;
+  }
+}
+@keyframes khat {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 290px;
+  }
+}
+@keyframes khat2 {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 500px;
+  }
+}
+@keyframes text-img {
+  0% {
+    top: 321;
+  }
+  100% {
+    top: 250px;
+  }
+}
+body {
+  background-color: $primary;
+  padding: 0px;
+  margin: 0px;
+}
+.container {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  .vl-header {
+    position: absolute;
+    &:nth-child(1) {
+      top: 22px;
+      right: 30px;
+      width: 1px;
+      height: 50px;
+      background-color: $text-color;
+    }
+    &:nth-child(2) {
+      top: 22px;
+      right: 30px;
+      width: 50px;
+      height: 1px;
+      background-color: $text-color;
+    }
+    &:nth-child(3) {
+      top: 540px;
+      right: 30px;
+      width: 1px;
+      height: 50px;
+      background-color: $text-color;
+    }
+    &:nth-child(4) {
+      top: 590px;
+      right: 30px;
+      width: 50px;
+      height: 1px;
+      background-color: $text-color;
+    }
+  }
+  .khat-body {
+    position: absolute;
+    &:nth-child(1) {
+      top: 0px;
+      left: 115px;
+      width: 1px;
+      height: 2800px;
+      background-color: #7979795d;
+      z-index: -1;
+    }
+    &:nth-child(2) {
+      top: 0px;
+      left: 455px;
+      width: 1px;
+      height: 2800px;
+      background-color: #7979795d;
+      z-index: -1;
+    }
+    &:nth-child(3) {
+      top: 0px;
+      left: 830px;
+      width: 1px;
+      height: 2800px;
+      background-color: #7979795d;
+      z-index: -1;
+    }
+    &:nth-child(4) {
+      top: 0px;
+      left: 1200px;
+      width: 1px;
+      height: 2800px;
+      background-color: #7979795d;
+      z-index: -1;
+    }
+  }
+}
+.header-home{
+  display: grid;
+  grid-template-columns: 0.5fr 5fr;
+.header-left {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    .card-header {
+      position: absolute;
+      left: 30px;
+      width: 150px;
+      height: auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "oswald";
+      background-color: #272727;
+      h1 {
+        margin: 1px;
+        color: $secondary;
+        letter-spacing: 3px;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        margin: 5px;
+        color: $header-color;
+      }
+    }
+    .iconbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 350px;
+      i {
+        border: 1px solid $text-color;
+        color: $text-color;
+        margin: 4px;
+        border-radius: 50px;
+        &:nth-child(2) {
+          padding: 8px 10px;
+        }
+        &:nth-child(3) {
+          padding: 8px 9px;
+        }
+        &:nth-child(4) {
+          padding: 8px;
+        }
+        &:nth-child(5) {
+          padding: 7px 10px;
+        }
+        &:hover {
+          color: $hover-card;
+          border: 1px solid $hover-card;
+        }
+      }
+      .vl-icon {
+        width: 1px;
+        height: 80px;
+        background-color: $text-color;
+      }
+    }
+  }
+.header-right {
+    background-image: url(../assets/img/projects/1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    .background {
+      z-index: -1;
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-rows: 1fr 6fr;
+      justify-content: end;
+      nav {
+        margin: 5px 40px;
+        ul {
+          display: flex;
+          li{
+            margin: 5px;
+            padding: 5px;
+            list-style-type: none;
+            color: $header-color;
+            font-family: "Oswald";
+            letter-spacing: 2px;
+            &:hover {
+              color: $secondary;
+              cursor: pointer;
+              &:nth-child(1) a{
+                color: $secondary;
+              }
+              &:nth-child(2) a{
+                color: $secondary;
+              }
+              ul {
+                display: block;
+              }
+            }
+            ul {
+              position: absolute;
+              display: none;
+              flex-direction: column;
+              background-color: $card-color;
+              padding: 2px;
+              z-index: 1;
+            }
+          }
+        }
+      }
+      .txt-header {
+        color: $header-color;
+        font-family: "oswald";
+        text-align: end;
+        margin: 50px 100px 250px 0;
+        h1 {
+          letter-spacing: 8px;
+        }
+        a {
+          font-family: "oswald";
+          border: 1px solid $header-color;
+          padding: 8px 25px;
+        }
+      }
+    }
+  }
+}
+.section-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: 0 100px;
+  .section1-left {
+    padding: 10px;
+    margin: 10px;
+    h1 {
+      font-family: "oswald";
+      color: $header-color;
+      letter-spacing: 8px;
+      font-size: 2rem;
+      span {
+        color: $secondary;
+      }
+    }
+    p {
+      color: $text-color;
+      font-family: "Didact Gothic";
+    }
+  }
+  .section1-right {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    img {
+      max-width: 80%;
+    }
+    .card-img {
+      position: absolute;
+      top: 220px;
+      left: 270px;
+      color: $header-color;
+      font-family: "oswald";
+      letter-spacing: 5px;
+      background-color: $card-color;
+      display: inline;
+      padding: 10px;
+    }
+  }
+}
+.section-project {
+  display: grid;
+  grid-template-rows: 0.5fr 3fr;
+  .txt-project {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 125px;
+    color: $header-color;
+    font-family: "oswald";
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    span {
+      color: $secondary;
+    }
+  }
+  .imgs {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    align-items: center;
+    margin: auto;
+    .img1 {
+      margin: 10px;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden;
+      position: relative;
+      .card-img-project {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 205px;
+        right: 126px;
+        letter-spacing: 4px;
+        font-family: "oswald";
+        .khat-project {
+          position: absolute;
+          top: 65px;
+          width: 200px;
+          height: 2px;
+          background-color: #8a8a8a;
+          margin: 8px 0 10px 0;
+        }
+        h2 {
+          color: $secondary;
+          margin: 3px 0;
+        }
+        h3 {
+          color: $header-color;
+          margin: 3px 0;
+          letter-spacing: 6px;
+        }
+        i {
+          color: $header-color;
+          font-size: 1.5rem;
+          margin-top: 20px;
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+      &:hover {
+        img {
+          background-image: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.904),
+            rgba(0, 0, 0, 0.877)
+          );
+        }
+        .card-img-project {
+          animation: card 0.2s linear both;
+        }
+        .khat-project {
+          animation: khat2 1s cubic-bezier(0.61, 0.61, 0, 0.26) both;
+        }
+      }
+    }
+    .img2 {
+      margin: 10px;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden;
+      position: relative;
+      .card-img-project {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 205px;
+        right: 115px;
+        letter-spacing: 4px;
+        font-family: "oswald";
+        .khat-project {
+          position: absolute;
+          top: 65px;
+          width: 200px;
+          height: 2px;
+          background-color: #8a8a8a;
+          margin: 8px 0 10px 0;
+        }
+        h2 {
+          color: $secondary;
+          margin: 3px 0;
+        }
+        h3 {
+          color: $header-color;
+          margin: 3px 0;
+          letter-spacing: 6px;
+        }
+        i {
+          color: $header-color;
+          margin-top: 20px;
+          font-size: 1.5rem;
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+      &:hover {
+        .card-img-project {
+          animation: card 0.2s linear both;
+        }
+        .khat-project {
+          animation: khat2 1s cubic-bezier(0.61, 0.61, 0, 0.26) both;
+        }
+      }
+    }
+  }
+}
+.section-services {
+  display: grid;
+  grid-template-rows: 0.5fr 2fr;
+  .services-text {
+    color: $header-color;
+    font-family: "oswald";
+    margin: 5px 130px;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    span {
+      color: $secondary;
+    }
+  }
+  .services-card {
+    display: flex;
+    justify-content: space-evenly;
+    color: $text-color;
+    padding: 90px;
+    .card-1 {
+      display: flex;
+      flex-direction: column;
+      font-family: "oswald";
+      margin: 10px;
+      width: 300px;
+      padding: 10px;
+      .khat-services {
+        width: 100px;
+        height: 1px;
+        background-color: $text-color;
+      }
+      img {
+        width: 30%;
+      }
+      h1 {
+        color: $header-color;
+      }
+      h2 {
+        align-self: flex-end;
+      }
+      p {
+        font-family: "Didact Gothic";
+      }
+      &:hover {
+        background-color: $card-color;
+        box-shadow: 0px 6px 10px #141414;
+        h2 {
+          color: $secondary;
+        }
+        .khat-services {
+          animation: khat 1s ease-out both;
+        }
+      }
+    }
+    .card-2 {
+      display: flex;
+      flex-direction: column;
+      font-family: "oswald";
+      margin: 10px;
+      width: 300px;
+      padding: 10px;
+      .khat-services {
+        width: 100px;
+        height: 1px;
+        background-color: $text-color;
+      }
+      img {
+        width: 30%;
+      }
+      h1 {
+        color: $header-color;
+      }
+      h2 {
+        align-self: flex-end;
+      }
+      p {
+        font-family: "Didact Gothic";
+      }
+      &:hover {
+        background-color: $card-color;
+        box-shadow: 0px 6px 10px #141414;
+        h2 {
+          color: $secondary;
+        }
+        .khat-services {
+          animation: khat 1s ease-out both;
+        }
+      }
+    }
+    .card-3 {
+      display: flex;
+      flex-direction: column;
+      font-family: "oswald";
+      margin: 10px;
+      width: 300px;
+      padding: 10px;
+      .khat-services {
+        width: 100px;
+        height: 1px;
+        background-color: $text-color;
+      }
+      img {
+        width: 30%;
+      }
+      h1 {
+        color: $header-color;
+      }
+      h2 {
+        align-self: flex-end;
+      }
+      p {
+        font-family: "Didact Gothic";
+      }
+      &:hover {
+        background-color: $card-color;
+        box-shadow: 0px 6px 10px #141414;
+        h2 {
+          color: $secondary;
+        }
+        .khat-services {
+          animation: khat 1s ease-out both;
+        }
+      }
+    }
+  }
+}
+.section-news {
+  display: grid;
+  grid-template-rows: 0.5fr 2fr;
+  .text-news {
+    font-family: "oswald";
+    letter-spacing: 5px;
+    padding: 5px 125px;
+    font-size: 1.5rem;
+    color: $header-color;
+    span {
+      color: $secondary;
+    }
+  }
+  .news-card-img {
+    display: flex;
+    .img1 {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      img {
+        max-width: 80%;
+      }
+      .text-img1 {
+        position: absolute;
+        top: 320px;
+        font-family: "oswald";
+        letter-spacing: 4px;
+        background-color: $card-color;
+        padding: 10px 55px;
+        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+        h6 {
+          color: $text-color;
+          margin: 4px;
+        }
+        h2 {
+          margin: 4px;
+          color: $secondary;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        .text-img1 {
+          animation: text-img 1.2s ease-out both;
+        }
+      }
+    }
+    .img2 {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      img {
+        width: 80%;
+      }
+      .text-img2 {
+        position: absolute;
+        top: 320px;
+        font-family: "oswald";
+        letter-spacing: 4px;
+        background-color: $card-color;
+        padding: 10px 100px;
+        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+        h6 {
+          color: $text-color;
+          margin: 4px;
+        }
+        h2 {
+          margin: 4px;
+          color: $secondary;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        .text-img2 {
+          animation: text-img 1.2s ease-out both;
+        }
+      }
+    }
+  }
+}
+.section-client {
+  .background-client {
+    position: relative;
+    margin: 100px 0;
+    width: 100%;
+    height: 400px;
+    background-image: url(../assets/img/projects/2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .card-client {
+      position: absolute;
+      top: 90px;
+      right: 50px;
+      display: flex;
+      flex-direction: column;
+      background-color: $primary;
+      width: 300px;
+      padding: 20px;
+      color: $text-color;
+      z-index: 1;
+      font-family: "oswald";
+      p {
+        font-family: "Didact Gothic";
+      }
+      h2 {
+        color: $header-color;
+        letter-spacing: 3px;
+        border-bottom: 1px solid #797979;
+      }
+      .jason {
+        display: flex;
+        img {
+          margin: 15px;
+          max-width: 25%;
+          border-radius: 50%;
+        }
+        .text-jason {
+          h1 {
+            font-family: "Didact Gothic";
+            color: $secondary;
+            letter-spacing: 2px;
+            margin: 2px;
+          }
+          p {
+            margin: 2px;
+            font-family: "Didact Gothic";
+          }
+        }
+      }
+    }
+    .play-client {
+      margin: 50px;
+      position: absolute;
+      top: 10px;
+      left: 165px;
+      i {
+        background-color: rgba(253, 156, 0, 0.281);
+        padding: 20px 22px;
+        border-radius: 50%;
+        color: $header-color;
+      }
+      &:hover {
+        i {
+          border: none;
+        }
+      }
+      h3 {
+        font-family: "oswald";
+        color: $header-color;
+        margin: 5px;
+        letter-spacing: 3px;
+      }
+    }
+    .iconbar-client {
+      position: absolute;
+      top: 330px;
+      background-color: $card-color;
+      width: 100%;
+      img {
+        filter: grayscale(0%);
+        width: 10%;
+        margin: 2px 15px;
+        &:hover {
+          filter: grayscale(100%);
+        }
+      }
+    }
+  }
+}
+.footer {
+  display: grid;
+  grid-template-rows: 1fr 0.2fr 1fr;
+  font-family: "Didact Gothic";
+  .row1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    margin: 0 10px;
+    color: $text-color;
+    div {
+      &:nth-child(3) {
+        justify-self: start;
+      }
+    }
+    h3 {
+      color: $secondary;
+    }
+  }
+  .khat {
+    width: 100%;
+    height: 1px;
+    background-color: #79797975;
+  }
+  .row2 {
+    margin: 0 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    justify-items: center;
+    color: $text-color;
+    div {
+      &:nth-child(1) {
+        p {
+          margin: 0 10px;
+        }
+      }
+    }
+    div {
+      &:nth-child(1) {
+        justify-self: end;
+      }
+      &:nth-child(3) {
+        justify-self: start;
+        &:hover{
+          color: $hover-card;
+          cursor: pointer;
+        }
+      }
+    }
+    i {
+      &:nth-child(1) {
+        text-align: center;
+        border: 1px solid;
+        padding: 8px 11px;
+        border-radius: 50%;
+        margin: 3px;
+      }
+      &:nth-child(2) {
+        text-align: center;
+        border: 1px solid;
+        padding: 8px 8.2px;
+        border-radius: 50%;
+        margin: 3px;
+      }
+      &:nth-child(3) {
+        text-align: center;
+        border: 1px solid;
+        padding: 8px 9px;
+        border-radius: 50%;
+        margin: 3px;
+      }
+      &:nth-child(4) {
+        text-align: center;
+        border: 1px solid;
+        padding: 8px 10px;
+        border-radius: 50%;
+        margin: 3px;
+      }
+      &:hover{
+        color: $hover-card;
+        cursor: pointer;
+      }
+    }
+  }
+}

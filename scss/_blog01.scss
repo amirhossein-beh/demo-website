@@ -1,0 +1,437 @@
+$primary: #272727;
+$secondary: #b09777;
+$text-color: #797979;
+$header-color: #fefefe;
+$card-color: #323232;
+$hover-card: #b19777;
+// 'Didact Gothic'
+// 'Oswald'
+.back-load{
+  position: absolute;
+  width: 100%;
+  height: 687px;
+  animation: back 3s linear;
+  z-index: 50;
+}
+.laoder{
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  width: 100px;
+  height: 1px;
+  animation: laod 3s cubic-bezier(0, 0, 0.96, 0.4);
+}
+@keyframes laod {
+  0%{
+      transform: scaleX(1);
+      background-color: #b09777;
+  }
+  95%{
+      background-color: #b09777;
+  }
+  100%{
+      transform: scaleX(10);
+      background-color: #b0977700;
+  }
+}
+@keyframes back {
+  0%{
+      background-color: #272727;
+  }
+  100%{
+      background-color: #272727;
+  }
+}
+.dibag-blog {
+  position: absolute;
+  width: 1px;
+  height: 2620px;
+  background-color: rgba(121, 121, 121, 0.116);
+  &:nth-child(1) {
+    left: 120px;
+  }
+  &:nth-child(2) {
+    left: 520px;
+  }
+  &:nth-child(3) {
+    left: 940px;
+  }
+  &:nth-child(4) {
+    left: 1260px;
+  }
+}
+.container-blog {
+  max-width: 1450px;
+  margin: auto;
+  position: relative;
+}
+.header-blog {
+  display: grid;
+  grid-template-columns: 0.5fr 5fr;
+  .header-left-blog {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    .card-header {
+      position: absolute;
+      left: 30px;
+      width: 150px;
+      height: auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "oswald";
+      background-color: #272727;
+      h1 {
+        margin: 1px;
+        color: $secondary;
+        letter-spacing: 3px;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        margin: 5px;
+        color: $header-color;
+      }
+    }
+  }
+  .header-right-blog {
+    background-image: url(../assets/img/projects/4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    .background-blog {
+      background-image: linear-gradient(
+        0deg,
+        rgb(39, 39, 39),
+        rgba(39, 39, 39, 0.938),
+        rgba(39, 39, 39, 0.692)
+      );
+      display: grid;
+      grid-template-rows: 1fr 6fr;
+      justify-content: end;
+      nav {
+        margin: 5px 40px;
+        ul {
+          display: flex;
+          li {
+            margin: 5px;
+            padding: 5px;
+            list-style-type: none;
+            color: $header-color;
+            font-family: "Oswald";
+            letter-spacing: 2px;
+            &:hover {
+              color: $secondary;
+              cursor: pointer;
+              &:nth-child(1) a{
+                color: $secondary;
+              }
+              &:nth-child(2) a{
+                color: $secondary;
+              }
+              ul {
+                display: block;
+              }
+            }
+            ul {
+              position: absolute;
+              display: none;
+              flex-direction: column;
+              background-color: $card-color;
+              padding: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.section-blog {
+  display: grid;
+  grid-template-rows: 0.1fr 5fr;
+  .text-blog {
+    color: $header-color;
+    font-family: "oswald";
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    margin: 0 270px;
+    span {
+      color: $secondary;
+    }
+  }
+  .card-blog {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin: auto;
+    .card1-blog {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 50px 0;
+      .card1-img-blog {
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      .card1-text-blog {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        overflow: hidden;
+        .card1-text1-blog {
+          h1 {
+            font-family: "oswald";
+            font-size: 4rem;
+            font-weight: 900;
+            color: $secondary;
+            margin: 0 10px;
+          }
+          p {
+            color: $text-color;
+            font-family: "Didact Gothic";
+            margin: 0 10px;
+          }
+        }
+        .card1-text2-blog {
+          color: $header-color;
+          font-family: "oswald";
+          letter-spacing: 5px;
+          h3 {
+            margin: 8px 0 10px 0;
+          }
+          h5 {
+            margin: 2px 0;
+            span {
+              color: $secondary;
+            }
+          }
+          .read-more {
+            display: flex;
+            align-items: center;
+            a {
+              font-family: "Didact Gothic";
+              margin: 0 5px;
+              letter-spacing: 2px;
+              color: $secondary;
+            }
+            .khat-read {
+              width: 30px;
+              height: 1px;
+              background-color: $secondary;
+            }
+            &:hover {
+              .khat-read{ background-color: $text-color;}
+              a {
+                color: $text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .card2-blog {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 50px 0;
+      .card2-img-blog {
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      .card2-text-blog {
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        overflow: hidden;
+        .card2-text1-blog {
+          h1 {
+            font-family: "oswald";
+            font-size: 4rem;
+            font-weight: 900;
+            color: $secondary;
+            margin: 0 10px;
+          }
+          p {
+            color: $text-color;
+            font-family: "Didact Gothic";
+            margin: 0 10px;
+          }
+        }
+        .card2-text2-blog {
+          color: $header-color;
+          font-family: "oswald";
+          letter-spacing: 5px;
+          h3 {
+            margin: 8px 0 10px 0;
+          }
+          h5 {
+            margin: 2px 0;
+            span {
+              color: $secondary;
+            }
+          }
+          .read-more {
+            display: flex;
+            align-items: center;
+            a {
+              font-family: "Didact Gothic";
+              margin: 0 5px;
+              letter-spacing: 2px;
+              color: $secondary;
+            }
+            .khat-read {
+              width: 30px;
+              height: 1px;
+              background-color: $secondary;
+            }
+            &:hover {
+              .khat-read{ background-color: $text-color;}
+              a {
+                color: $text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .card3-blog {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 50px 0;
+      .card3-img-blog {
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      .card3-text-blog {
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        overflow: hidden;
+        .card3-text1-blog {
+          h1 {
+            font-family: "oswald";
+            font-size: 4rem;
+            font-weight: 900;
+            color: $secondary;
+            margin: 0 10px;
+          }
+          p {
+            color: $text-color;
+            font-family: "Didact Gothic";
+            margin: 0 10px;
+          }
+        }
+        .card3-text2-blog {
+          color: $header-color;
+          font-family: "oswald";
+          letter-spacing: 5px;
+          h3 {
+            margin: 8px 0 10px 0;
+          }
+          h5 {
+            margin: 2px 0;
+            span {
+              color: $secondary;
+            }
+          }
+          .read-more {
+            display: flex;
+            align-items: center;
+            a {
+              font-family: "Didact Gothic";
+              margin: 0 5px;
+              letter-spacing: 2px;
+              color: $secondary;
+            }
+            .khat-read {
+              width: 30px;
+              height: 1px;
+              background-color: $secondary;
+            }
+            &:hover {
+              .khat-read{ background-color: $text-color;}
+              a {
+                color: $text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .card4-blog {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 50px 0;
+      .card4-img-blog {
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      .card4-text-blog {
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        .card4-text1-blog {
+          h1 {
+            font-family: "oswald";
+            font-size: 4rem;
+            font-weight: 900;
+            color: $secondary;
+            margin: 0 10px;
+          }
+          p {
+            color: $text-color;
+            font-family: "Didact Gothic";
+            margin: 0 10px;
+          }
+        }
+        .card4-text2-blog {
+          color: $header-color;
+          font-family: "oswald";
+          letter-spacing: 5px;
+          h3 {
+            margin: 8px 0 10px 0;
+          }
+          h5 {
+            margin: 2px 0;
+            span {
+              color: $secondary;
+            }
+          }
+          .read-more {
+            display: flex;
+            align-items: center;
+            a {
+              font-family: "Didact Gothic";
+              margin: 0 5px;
+              letter-spacing: 2px;
+              color: $secondary;
+            }
+            .khat-read {
+              width: 30px;
+              height: 1px;
+              background-color: $secondary;
+            }
+            &:hover {
+              .khat-read{ background-color: $text-color;}
+              a {
+                color: $text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
